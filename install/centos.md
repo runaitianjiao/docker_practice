@@ -72,6 +72,11 @@ $ sudo yum-config-manager --enable docker-ce-nightly
 $ sudo yum makecache fast
 $ sudo yum install docker-ce
 ```
+如果是CentOS 8
+1.需要把命令后面的fast去掉，不然会报错.
+2.获取rpm包 wget https://download.docker.com/linux/centos/7/x86_64/edge/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
+  升级containerd.io（安装rpm包） yum -y install containerd.io-1.2.6-3.3.el7.x86_64.rpm
+  再次执行sudo yum install docker-ce
 
 ## 使用脚本自动安装
 
